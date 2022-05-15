@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Flash Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body style="margin:0;">
+
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("my_container");
+        container.appendChild(player);
+        player.load("game.swf");
+    });
+    
+</script>
+<script src="./index.js"></script>
+
+<div id="my_container">
+</div>
+
+</body>
+</html>
